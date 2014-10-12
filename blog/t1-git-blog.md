@@ -1,4 +1,4 @@
-Git from the Ground Up
+A Git's Guide to Git
 
 10/12/2014
 
