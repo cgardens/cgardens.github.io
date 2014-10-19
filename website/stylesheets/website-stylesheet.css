@@ -1,0 +1,135 @@
+* {
+  font-family: 'AvenirBook', Calibri, san-serif;
+  color: white;
+}
+
+@font-face {
+  font-family: AvenirBook;
+  src: url('../utilities/fonts/Avenir-Book.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('../utilities/fonts/Avenir-Book.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+body {
+  /*background-image: url("../imgs/Orion.jpg");*/
+
+
+}
+
+#orion {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+#wbody {
+  background-color: #000010;
+  position: absolute;
+  display: inline-block;
+  width: 900px;
+  height: 900px;
+  top: 100px;
+  left: 100px;
+}
+
+#navbar {
+  position: fixed;
+  top: 0px;
+  background-color:   #000010;
+  height: 30px;
+  width: 900px;
+
+  border-radius: 25px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.nbutton a {
+  color: white;
+  text-decoration: none;
+}
+
+.nbutton a:hover {
+  text-decoration: underline;
+}
+
+.nbutton {
+  height: 20px;
+  width: 150px;
+  margin-left: 10px;
+  margin-top: 3px;
+  display: inline-block;
+  vertical-align:top;
+}
+
+/* Tried to move the buttons to the right by pushing the first button right and then having the rest stack after it, but I couldn't get it to work
+.nbutton:nth-of-type(1) {
+  position: ;
+  display: inline-block;
+  left: 30px;
+  background-color: yellow;
+} */
+
+#sitebody {
+  margin-top: 35px;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding: 15px;
+  background-color:   #000010;
+}
+
+.title {
+  font-size: 50px;
+  position: static;
+  display: block;
+  top: 35px;
+}
+
+.statement {
+
+  width: 325px;
+  display: inline-block;
+  float: left;
+  clear: left;
+  margin-right: 20px;
+}
+
+#headshot {
+  height: 296px;
+  width: 450px;
+  float: left;
+  display: inline-block;
+
+}
+
+#socialmedia a {
+  margin-right: 10px;
+}
+
+
+
+.project {
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+  background-color: red;
+  display: static;
+  float: left;
+  margin: 15px;
+
+}
+
+#project1 {
+  clear: left;
+  background-color: green;
+  margin-left: 75px;
+}
+
+.project img {
+  max-width:100%;
+  max-height:100%;
+}
