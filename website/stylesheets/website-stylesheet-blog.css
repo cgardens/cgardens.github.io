@@ -30,7 +30,6 @@ body {
   position: absolute;
   display: inline-block;
   width: 900px;
-  height: 900px;
   top: 100px;
   left: 100px;
 }
@@ -89,18 +88,49 @@ body {
   top: 35px;
 }
 
+.subheader {
+  font-size: 35px;
+  float: left;
+  position: static;
+  display: inline-block;
+
+}
+
+#contact {
+  position: relative;
+  float: right;
+  top: -50px;
+}
+
+#entrytitle {
+  font-size: 28px;
+  float: left;
+  clear: left;
+  position: static;
+  display: inline-block;
+
+}
+
+#date {
+  font-size: 1em;
+  float: left;
+  clear: left;
+  position: static;
+  display: inline-block;
+}
+
+
 .statement {
 
-  width: 325px;
+  width: 425px;
   display: inline-block;
   float: left;
   clear: left;
   margin-right: 20px;
 }
 
-#headshot {
-  height: 296px;
-  width: 450px;
+#blogphoto {
+
   float: left;
   display: inline-block;
 
