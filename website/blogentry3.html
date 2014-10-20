@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon" href="../website/imgs/favicon.ico" >
+    <title>Charlie's Garden: Blog</title>
+    <link rel="stylesheet" type="text/css" href="../website/stylesheets/website-stylesheet-blog.css" />
+    <link href="../website/utilities/css-social-buttons/social-buttons.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <img id="orion" src="../website/imgs/Orion.jpg" />
+    <div id="wbody">
+      <div id="navbar">
+        <div class= "nbutton"><a href=#>HOME</a></div>
+        <div class= "nbutton"><a href=#>PROJECTS</a></div>
+        <div class= "nbutton"><a href=#>BLOG</a></div>
+        <div class= "nbutton"><a href=#>RESUME</a></div>
+      </div>
+      <div id="sitebody">
+        <div class="title">CHARLIE'S GARDEN</div>
+        <div class="subheader">DBC Blog</div>
+        <div id="contact">
+              <p class="sb circle gradient blue">
+                <a href="https://www.facebook.com/giardina.charles" class="facebook">Facebook</a>
+                <a href="https://twitter.com/charlesgardens" class="twitter">Twitter</a>
+                <a href="https://www.linkedin.com/pub/charles-giardina/39/466/167/" class="linkedin">LinkedIn</a>
+              </p>
+        </div>
+
+
+        <div id="entrytitle"> </br>Where the F*** am I? </br> CSS: Positioning Overview</div>
+        <div id="date"> 10/19/2014 </div>
+        <div class="statement">
+          <p>In CSS there are four major "Position" options: static, relative, absolute, fixed. It is incredibly important to know what each does or you might find that some of your divs have gone missing. The key to understanding how positioning work is not only to understand what each attribute does, but how they interact with one on another, especially when augmented with display settings (block, inline-block).</p>
+
+          <p>STATIC is your default setting. It's going to float into the next available spot it can find.</p>
+
+          <p>RELATIVE is a variation the theme. It's going to note where it would have ended up if it were static and then based on the parameters you feed it (top, left, right, bottom), it's going to move that many units based off of where it WOULD HAVE been. This is in contrast to absolute...</p>
+
+          <p>ABSOLUTE is going to look at the whole page when you give it a top, right, etc attribute and move to the correct pixel on the whole page using the top left corner as starting point. It doesn't reconnoiter at all where it would have been if it were static.</p>
+
+          <p>FIXED positioning, like abolute, is going to position itself exactly where you tell it to in your browser frame. When you scroll, however, the absolute item will move along the page, the fixed item will not. It will stay exactly where it's supposed to in the frame. If you told it to be at top: 0px; left: 0px, it will affix itself to the top left of the screen and never move.</p>
+
+          <p>This post is just a basic overview of the different position settings. Now go research display settings and experiment with what happens when you have multiple divs with different positions and display settings. Which ones stack the way you'd expect? Which do not?</p>
+        </div>
+        <img id="blogphoto" src="../website/imgs/whereami.png"/>
+
+      </div>
+    </div>
+  </body>
+</html>
