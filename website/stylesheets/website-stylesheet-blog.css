@@ -9,6 +9,11 @@
        url('../utilities/fonts/Avenir-Book.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
 
+.ruby {
+  white-space: pre-line;
+  background-color: #000099;
+}
+
 body {
   /*background-image: url("../imgs/Orion.jpg");*/
 

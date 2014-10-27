@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon" href="../website/imgs/favicon.ico" >
+    <title>Charlie's Garden: Blog</title>
+    <link rel="stylesheet" type="text/css" href="../website/stylesheets/website-stylesheet-blog.css" />
+    <link href="../website/utilities/css-social-buttons/social-buttons.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <img id="orion" src="../website/imgs/Orion.jpg" />
+    <div id="wbody">
+      <div id="navbar">
+        <div class= "nbutton"><a href=#>HOME</a></div>
+        <div class= "nbutton"><a href=#>PROJECTS</a></div>
+        <div class= "nbutton"><a href=#>BLOG</a></div>
+        <div class= "nbutton"><a href=#>RESUME</a></div>
+      </div>
+      <div id="sitebody">
+        <div class="title">CHARLIE'S GARDEN</div>
+        <div class="subheader">DBC Blog</div>
+        <div id="contact">
+              <p class="sb circle gradient blue">
+                <a href="https://www.facebook.com/giardina.charles" class="facebook">Facebook</a>
+                <a href="https://twitter.com/charlesgardens" class="twitter">Twitter</a>
+                <a href="https://www.linkedin.com/pub/charles-giardina/39/466/167/" class="linkedin">LinkedIn</a>
+              </p>
+        </div>
+
+
+        <div id="entrytitle"> </br>Disaster at Costco: <br/> A Tutorial on When to Use an Array or a Hash ... TO SAVE YOUR LIFE!!! </div>
+        <div id="date"> 10/26/2014 </div>
+        <div class="statement">
+          <p>Arrays and hashes are both objects in Ruby that that primarily used for storing data. Their difference lies in how they retrieve data, which I will illustrate using my weekly shopping list of: fish, yogurt, and milk--yes. yes. I know, milk was a bad choice.<p>
+
+          <p>An array pairs each piece of information stored in it with an integer index value. For example, I want to store my shopping list  as strings: "fish," "yogurt," "milk," you could do so in an array by doing the follow. Please note that an array can store any rub object: strings, integers, floats, other arrays, and hashes.</p>
+
+          <span class="ruby">
+            shopping_list = ["fish", "yogurt", "milk"]
+          </span>
+
+          <p>Now each item in your array has a unique index number based on its current position. In this case they are as follows:</p>
+
+          <span class="ruby">
+            shopping_list = ["fish", "yogurt", "milk"]
+                             0       1         2
+          </span>
+
+          <p>Arrays use a base-0 counting system, so instead of "fish" being the first item it is the zeroth item in your list. Now if I want to call one of my items I can simply say:</p>
+
+          <span class="ruby">
+            puts shopping_list[1]
+
+            "yogurt"
+          </span>
+
+          <p>Now with an array you can change the order of the items in your list using numerous of different methods and paramters. For the sake of this example we will use the .sort! method. When we don't give it any paramters it is going to sort our items alphabetically (for integers it will change the order from smalled to largest).</p>
+
+          <span class="ruby">
+            shopping_list.sort!
+            puts food
+
+            ["fish", "milk", "yogurt"]
+          </span>
+
+          <p>Now be careful! Fish still has an index position of 0, but now when I call food[1] ruby is going to return "milk" not "yogurt." Lesson: If you change the order of your array you will need to know the new index numbers to call our desired item--Ruby won't remember it for you! This concept is particularly important when you begin to add and remove items from your array. Adding items at the beginning (ex. array method .unshift("what you want to add) will push back all of your previous entries by one.</p>
+
+          <p>Which is a nice segue into hashes. Say you want to store a bunch of items but you don't really care about the order. Or maybe when you retrieve them you don't want to have to know its arbitrary integer index value. Maybe it makes more sense to call it based on some other attribute. Meet hashes!</p>
+
+          <p>Hashes perform the same function as arrays insofar as they store information, but instead of index values, each value you enter (think of this as the item you want to store--it can be any Ruby object that you'd like) is associated with a key (this is analogous to the integer index number in array except that this key can be any ruby object you'd like.</p>
+
+          <p>So let's go back to my shopping list. While an array was a pretty simple way to hold that information and look at it all together, the index values don't actually add any functionality to my list, but a hash could. Let's say, I shop at Costco, which is huge! So when I pull up my shopping list on my phone, I want to be able to tell it to show me all of the things that I want to buy in the section of the store that I'm in so that I don't have to double back--though if I do I could probably pick up some more samples. But no, I'm a lazy programmer, I don't want to have to walk more! Not even more food. Does Costco deliver? So... I'm going to make a hash, but arrange my values with keys based on the departments in the store.</p>
+
+          <span class="ruby">
+            shopping_list = {
+            "meat" => "fish"
+            "dairy" => ["yogurt", "eggs"]
+            }
+          </span>
+
+          <p>What I did here was put an array (the square brackets) inside of my new hash (the curly brackets). The object before the little rocket arrow is the KEY (or what I'm going to use to call on my item) and the object after the arrow is the VALUE--the key-value system that I mentioned earlier. Now when I call on my hash in the meat department:</p>
+
+          <span class="ruby">
+            puts shopping_list["meat"]
+
+            "fish"
+          </span>
+
+          <p>But in the dairy department???</p>
+
+          <span class="ruby">
+            puts shopping_list["dairy"]
+
+            ["yogurt", "milk"]
+          </span>
+
+          <p>We could work on the Ruby so that it would display what I want in the dairy department without the square brackets, but for now it's just a shopping list, so we don't care. And this is a blog post about the difference between hashes and arrays, not a beauty school, so we doubly don't care!</p>
+
+          <p>So next time you want to store multiple items in ruby, take a second to stop and think about how using an array versus a hash is going to add meaning and functionality to your storage system. There are certainly many cases where it's just not going to matter that much. And if you're feeling really indecisive you can make a hash where each key is just an integer. But I've found that more often than not, either an array or hash is going to make more sense based on how you want to retrieve your information and what you want to do with it once its stored.</p>
+
+          <p>Did this blog save your life? Tell us your store <a href=#>here</a> ...Sorry this link doesn't work yet.</p>
+        </div>
+        <img id="blogphoto" src="../website/imgs/blog4-img-1.jpg"/>
+
+      </div>
+    </div>
+  </body>
+</html>
