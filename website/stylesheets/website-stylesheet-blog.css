@@ -11,7 +11,8 @@
 
 .ruby {
   white-space: pre-line;
-  background-color: #000099;
+  font-family: monospace;
+
 }
 
 body {
