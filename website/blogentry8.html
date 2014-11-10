@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon" href="../website/imgs/favicon.ico" >
+    <title>Charlie's Garden: Blog</title>
+    <link rel="stylesheet" type="text/css" href="../website/stylesheets/website-stylesheet-blog.css" />
+    <link href="../website/utilities/css-social-buttons/social-buttons.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <img id="orion" src="../website/imgs/Orion.jpg" />
+    <div id="wbody">
+      <div id="navbar">
+        <div class= "nbutton"><a href=#>HOME</a></div>
+        <div class= "nbutton"><a href=#>PROJECTS</a></div>
+        <div class= "nbutton"><a href=#>BLOG</a></div>
+        <div class= "nbutton"><a href=#>RESUME</a></div>
+      </div>
+      <div id="sitebody">
+        <div class="title">CHARLIE'S GARDEN</div>
+        <div class="subheader">DBC Blog</div>
+        <div id="contact">
+              <p class="sb circle gradient blue">
+                <a href="https://www.facebook.com/giardina.charles" class="facebook">Facebook</a>
+                <a href="https://twitter.com/charlesgardens" class="twitter">Twitter</a>
+                <a href="https://www.linkedin.com/pub/charles-giardina/39/466/167/" class="linkedin">LinkedIn</a>
+              </p>
+        </div>
+
+
+        <div id="entrytitle"> </br>The Rough N' Tumble Dating Engine</div>
+        <div id="date"> 11/09/2014 </div>
+        <div class="statement">
+          <p>Ever wonder what is really under the hood in a dating website? Well they're not telling so I decided to build my own. Based on scientifically-proven science backed up by science, I can find your perfect match after you answer just 3 simple yes or no questions! Don't believe me. Neither do I? But here's a fun prototype anyway.</p>
+
+          <p>I built a class that creates user profiles and stores their information. The class has an instance method that allows each user to check their compatability based on other people's answers to the three questions. It then returns a percentage value of how compatible you are with each user!</p>
+
+          <p>It's still rather rough, but you can still have a pretty fun time. Feel free to test it out!</p>
+
+          <span class="ruby">
+            #Dating Class Object
+
+            @@profiles = Hash.new(Array.new)
+
+            class Date
+              def initialize
+                p "Type a username."
+                @username = gets.chomp
+                p "Answers these three questions that scientifically proven to help identify your compatability with a partner."
+                p "Do you like dogs? (y/n)"
+                @dogs = gets.chomp
+                p "Do you like to exercise? (y/n)"
+                @exercise = gets.chomp
+                p "Do you like romantic comedies? (y/n)"
+                @romcom = gets.chomp
+
+                @answers = [@dogs, @exercise, @romcom]
+
+                @@profiles[@username] = @answers
+              end
+
+              def review_profile
+                p @username
+                p "Do you like dogs? #{@dogs}"
+                p "Do you like to exercise? #{@exercise}"
+                p "Do you like romantic comedies? #{@romcom}"
+              end
+
+              def find_date
+                @matches = Hash.new(1)
+                @@profiles.each do |k, v|
+                  @matches[k] += 33 if v[0] == @dogs
+                  @matches[k] += 33 if v[1] == @exercise
+                  @matches[k] += 33 if v[2] == @romcom
+                end
+                p "Here are your compatability results! The rest is up to you."
+                p @matches
+              end
+            end
+          </span>
+        </div>
+        <img id="blogphoto" src="../website/imgs/blog8-img-1.jpg"/>
+
+      </div>
+    </div>
+  </body>
+
+<!--comment-->
+
+</html>
+
