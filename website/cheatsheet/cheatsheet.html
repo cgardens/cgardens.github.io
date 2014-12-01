@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon" href="" >
+    <title>SQL Cheat Sheet</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,100italic,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+    <header>
+      <h1> Cheat Sheet</h1>
+    </header>
+
+    <div class = "leftnav">
+      <h2>Commands</h2>
+      <ul>
+        <li><a href="#SELECT">SELECT</a></li>
+        <li><a href="#FROM">FROM</a></li>
+        <li><a href="#WHERE">WHERE</a></li>
+        <li><a href="#ORDER BY">ORDER BY</a></li>
+        <li><a href="#LIKE">LIKE</a></li>
+        <li><a href="#DISTINCT">DISTINCT</a></li>
+        <li><a href="#JOIN">JOIN</a></li>
+        <li><a href="#GROUP BY">GROUP BY</a></li>
+        <li><a href="#WITH">WITH</a></li>
+        <li><a href="#HAVING">HAVING</a></li>
+        <li><a href="#COUNT">COUNT</a></li>
+        <li><a href="#COALESCE">COALESCE</a></li>
+        <li><a href="#LIMIT">LIMIT</a></li>
+      </ul>
+    </div>
+
+    <main>
+      <a name="SELECT"></a>
+      <h2>SELECT</h2>
+        <h3>Description</h3>
+        <p>Denotes which fields the SQL query will return.</p>
+        <h3>Use Case</h3>
+        <div class = "code">
+          SELECT state_name;</br>
+          => returns the state_name field for all records.
+        </div>
+      <hr>
+      <a name="FROM"></a>
+      <h2>FROM</h2>
+        <h3>Description</h3>
+        <p>Determines the table from which your are extracting data </p>
+        <h3>Use Case</h3>
+        <div class = "code">
+          SELECT state_name<br>
+          FROM states;<br>
+          => extracts state_names from the states table
+        </div>
+      <hr>
+      <a name="WHERE"></a>
+      <h2>WHERE</h2>
+        <h3>Description</h3>
+        <p>Sets conditions for values in a field whereby if it passes the field for that record will be displayed</p>
+        <h3>Use Case</h3>
+        <div class = "code">
+          SELECT state_name<br>
+          FROM states<br>
+          WHERE state_name is not null;<br>
+          => extracs state_names form the states table for all states whose name aren't null.
+        </div>
+      <hr>
+      <a name="ORDER BY"></a>
+      <h2>ORDER BY</h2>
+        <h3>Description</h3>
+        <p>Order your results in ascending order based on the contents of a certain field. Use "ORDER BY field DESC" to order your results in descnding order.</p>
+        <h3>Use Case</h3>
+        <div class = "code">
+          SELECT state_name<br>
+          FROM states<br>
+          ORDER BY region_id;<br>
+          => Orders the records extracted by their region_id.
+        </div>
+      <hr>
+      <a name="LIKE"></a>
+      <h2>LIKE</h2>
+        <h3>Description</h3>
+        <p>Allows you to extract records that match certain criteria. Often used with the WHERE clause. If I want to find all titles of an auction that contain shirt i.e. WHERE auction.title like ('%Shirt%').</p>
+        <h3>Use Case</h3>
+        <div class = "code">
+          SELECT state_name<br>
+          FROM states<br>
+          WHERE state_name LIKE ('w%');<br>
+          => returns state_names that start with "w"
+        </div>
+      <hr>
+      <a name="DISTINCT"></a>
+      <h2>DISTINCT</h2>
+        <h3>Description</h3>
+        <p>Allows you to select the unique values from a sample. This can come in handy when paired with count, if you wanted to count the number of unique users in a certain query you can write count(distinct(user.id))</p>
+        <h3>Use Case</h3>
+        <div class = "code">
+          SELECT DISTINCT city_name<br>
+          FROM customers;<br>
+          => Returns a list of the cities that customers are from without repeats.
+        </div>
+      <hr>
+      <a name="JOIN"></a>
+      <h2>JOIN</h2>
+        <h3>Description</h3>
+        <p>INNER JOIN: Returns all rows when there is at least one match in BOTH tables <br>
+          LEFT JOIN: Return all rows from the left table, and the matched rows from the right table <br>
+          RIGHT JOIN: Return all rows from the right table, and the matched rows from the left table <br>
+          FULL JOIN: Return all rows when there is a match in ONE of the tables</p>
+        <h3>Use Case</h3>
+        <div class = "code">
+          SELECT regions.region_name, states.state_name<br>
+          FROM states<br>
+          INNER JOIN regions<br>
+          ON states.region_id=regions.id<br>
+          => Returns a table with with region_name and<br>
+          based on a combined table made up of the states <br>
+          table and the regions table.
+        </div>
+      <hr>
+      <a name="GROUP BY"></a>
+      <h2>GROUP BY</h2>
+        <h3>Description</h3>
+        <p>Aggregates results based on field. Meaning for every instance of a value in a field, the resulting table has another tally </p>
+        <h3>Use Case</h3>
+        <div class = "code">
+          TABLE:<br>
+          ID SHIPPING_COMPANY<br>
+          1    FedEx<br>
+          2    UPS<br>
+          3    UPS<br>
+          4    USPS<br>
+          5    FedEx<br>
+          6    FedEx<br>
+          <br>
+          SELECT Count(ID), SHIPPING_COMPANY<br>
+          FROM TABLE<br>
+          GROUP BY SHIPPING_COMPANY;<br>
+          <br>
+          =><br>
+            1 USPS<br>
+            2 UPS<br>
+            3 FedEx<br>
+        </div>
+      <hr>
+      <a name="WITH"></a>
+      <h2>WITH</h2>
+        <h3>Description</h3>
+        <p>WITH: Sometimes you need to create a query and have another query pull from those results.</p>
+        <h3>Use Case</h3>
+        <div class = "code">
+          WITH;<br>
+        </div>
+      <hr>
+      <a name="HAVING"></a>
+      <h2>HAVING</h2>
+        <h3>Description</h3>
+        <p> The same as WHERE for aggregate functions.</p>
+        <h3>Use Case</h3>
+        <div class = "code">
+          HAVING;<br>
+        </div>
+      <hr>
+      <a name="COUNT"></a>
+      <h2>COUNT</h2>
+        <h3>Description</h3>
+        <p>count: used to count how many times a result pops up i.e.: SELECT count(user.id) from users - gives you a count of all users.</p>
+        <h3>Use Case</h3>
+        <div class = "code">
+          COUNT;<br>
+        </div>
+      <hr>
+      <a name="COALESCE"></a>
+      <h2>COALESCE</h2>
+        <h3>Description</h3>
+        <p>COALESCE: Allows you to return the the value of something, but if there's no value return something else, like 0.</p>
+        <h3>Use Case</h3>
+        <div class = "code">
+          COALESCE;<br>
+        </div>
+      <hr>
+      <a name="LIMIT"></a>
+      <h2>LIMIT</h2>
+        <h3>Description</h3>
+        <p>LIMIT: limit the number of results, can often be used to get a small sample of large data.</p>
+        <h3>Use Case</h3>
+        <div class = "code">
+          LIMIT;<br>
+        </div>
+      <hr>
+
+    </main>
+
+
+    <footer>
+    </footer>
+  </body>
+
+</html>
