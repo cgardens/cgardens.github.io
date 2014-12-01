@@ -7,16 +7,30 @@ header {
   width: 100%;
   display: block;
   border-bottom: 2px solid black;
-  vertical-align: center;
   text-align: center;
+  background: url('header_background.jpg') no-repeat;
+  background-size: 100%;
+  opacity: .6;
+  vertical-align: top;
+  margin: 0px;
+  padding: 0px;
+}
+
+header h1 {
+  color: #129793;
+}
+
+header h2 {
+  color: #9BD7D5;
 }
 
 .leftnav {
-  min-height: 600px;
+  min-height: 400px;
   width: 15%;
   display: inline-block;
   margin-top: 30px;
   border-right: 2px solid black;
+  position: fixed;
 }
 
 .leftnav h2 {
@@ -42,8 +56,10 @@ main {
   width: 80%;
   display: inline-block;
   margin-top: 30px;
-  margin-left: 30px;
+  margin-left: 18%;
   vertical-align: top;
+  /*background-color: rgba(18, 151, 147, 0.1); */
+
 
 }
 
