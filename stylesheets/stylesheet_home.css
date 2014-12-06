@@ -1,0 +1,40 @@
+/** {
+  border: 2px solid black;
+}*/
+
+header {
+  height: 100px;
+}
+
+main {
+  display: block;
+}
+
+#flower {
+  height: 200px;
+}
+
+#text {
+  display: inline-block;
+  vertical-align: top
+}
+
+#social_media {
+
+}
+
+.media_icon{
+  height: 24px;
+  margin: 5px 10px 0px 0px;
+  color: red;
+}
+
+footer {
+  margin-top: 100px;
+  display: block;
+  width: 150px;
+
+  border-top: 1px solid gray;
+
+}
+}

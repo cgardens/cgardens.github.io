@@ -1,0 +1,125 @@
+* {
+  font-family: MyriadPro, Calibri, san-serif;
+}
+
+@font-face {
+  font-family: MyriadPro;
+  src: url('utilities/fonts/MYRIADPRO-REGULAR.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('/utilities/fonts/MYRIADPRO-REGULAR.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+/*BACKGROUND*/
+body {
+  text-align: center;
+}
+
+
+
+/*HEADER*/
+
+header {
+  background-color: #64CF20;
+  display: block;
+  padding:10px;
+}
+
+#logo {
+  display: inline-block;
+  vertical-align: top;
+  border-right: 2px solid gray;
+  padding-right: 10px;
+  margin-right: 25px;
+}
+
+#logopic {
+  height: 75px;
+}
+
+#social_media {
+
+}
+
+.media_icon{
+  height: 24px;
+  margin: 5px 10px 0px 0px;
+  color: red;
+}
+
+#navbar {
+  display: inline-block;
+}
+
+.nbutton {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+
+
+/*BODY*/
+main {
+  overflow:auto;
+
+}
+
+
+/*About*/
+
+#about {
+  background-color: #A3E399;
+  padding:10px;
+
+}
+
+#bio {
+  display: inline-block;
+  width: 500px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  text-align: left;
+}
+
+#headshot {
+  width: 300px;
+  margin: 20px;
+
+}
+
+/*Projects*/
+#projects {
+  display: block;
+  background-color: #73CA5A;
+  height: 300px;
+  padding:10px;
+  clear: left;
+
+}
+
+.project {
+
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+  margin: 32.5px;
+}
+
+.project img {
+  max-width:100%;
+  max-height:100%;
+}
+
+
+
+/*FOOTER*/
+footer {
+  background-color: #55A16D;
+  display: block;
+  padding:10px;
+
+}
+
+#cglogo {
+  height: 60px;
+}
+
