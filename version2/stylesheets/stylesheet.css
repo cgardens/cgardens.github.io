@@ -68,7 +68,7 @@ main {
 /*About*/
 
 #about {
-  background-color: #A3E399;
+  background-color: #55A16D;
   padding:10px;
 
 }
@@ -85,6 +85,7 @@ main {
 #headshot {
   width: 300px;
   margin: 20px;
+  border: 10px solid #A3E399;
 
 }
 
