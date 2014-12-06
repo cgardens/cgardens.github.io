@@ -69,7 +69,9 @@ main {
 
 #about {
   background-color: #55A16D;
-  padding:10px;
+  /*padding:10px;*/
+  width: 900px;
+  margin: auto;
 
 }
 
@@ -84,8 +86,13 @@ main {
 
 #headshot {
   width: 300px;
-  margin: 20px;
+  /*margin: 20px;*/
   border: 10px solid #A3E399;
+  position: relative;
+  top: 4px;
+  left: 40px;
+
+
 
 }
 
