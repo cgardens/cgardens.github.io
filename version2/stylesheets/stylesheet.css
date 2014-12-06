@@ -89,7 +89,7 @@ main {
 /*Projects*/
 #projects {
   display: block;
-  background-color: #73CA5A;
+/*  background-color: #73CA5A;*/
   height: 300px;
   padding:10px;
   clear: left;
@@ -102,6 +102,7 @@ main {
   width: 200px;
   display: inline-block;
   margin: 32.5px;
+  border: 10px solid #55A16D;
 }
 
 .project img {
