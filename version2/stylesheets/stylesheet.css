@@ -21,6 +21,7 @@ header {
   /*background-color: #64CF20;*/
   display: block;
   padding:10px;
+  border: 10px solid #55A16D;
 }
 
 #logo {
