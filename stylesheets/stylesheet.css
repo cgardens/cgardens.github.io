@@ -1,0 +1,169 @@
+* {
+  border: 2px solid black;
+  font-family: MyriadPro, Calibri, san-serif;
+}
+
+@font-face {
+  font-family: MyriadPro;
+  src: url('utilities/fonts/MYRIADPRO-REGULAR.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('/utilities/fonts/MYRIADPRO-REGULAR.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+/*BACKGROUND*/
+body {
+/*  text-align: center;*/
+}
+
+
+
+
+/*HEADER*/
+
+header {
+  background-color: #64CF20;
+  display: block;
+  padding:10px;
+  width: 1000px;
+}
+
+#logo {
+  display: inline-block;
+  vertical-align: top;
+  border-right: 2px solid gray;
+  padding-right: 10px;
+  margin-right: 25px;
+}
+
+#logopic {
+  height: 75px;
+}
+
+#social_media {
+
+}
+
+.media_icon{
+  height: 24px;
+  margin: 5px 10px 0px 0px;
+  color: red;
+}
+
+#navbar {
+  display: inline-block;
+}
+
+.nbutton {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+
+
+/*BODY*/
+main {
+  overflow:auto;
+
+}
+
+
+/*About*/
+
+#bio {
+  display: inline-block;
+  width: 300px;
+  margin: 10px;
+  padding: 15px;
+  text-align: left;
+  background-color: #A3E399;
+  vertical-align: top;
+}
+
+#headshot_container {
+  background-color: #73CA5A;
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px;
+  padding: 15px;
+  height: 240px;
+}
+
+#stupidcontainer {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#headshot {
+  width: 300px;
+  margin: 20px;
+}
+
+#twitter {
+  background-color: #55A16D;
+  height: 100px;
+  width: 345px;
+  display: inline-block;
+  vertical-align: bottom;
+  clear: left;
+  margin: 10px;
+  padding: 15px;
+}
+
+#eatspace {
+  background-color: #36881D;
+  width: 75px;
+  height: 425px;
+  display: inline-block;
+  margin: 10px;
+  padding: 15px;
+}
+
+#current_projects_header{
+  background-color: #36881D;
+  display: inline-block;
+  clear: left;
+  margin: 10px;
+  padding: 15px;
+
+
+
+}
+
+.project_pic_built_in {
+  display: inline-block;
+  margin: 10px;
+}
+
+.project {
+
+  height: 300px;
+  width: 300px;
+  display: inline-block;
+  margin: 10px;
+}
+
+#project2 {
+  background-color: #36881D;
+}
+
+#project3 {
+  background-color: #A3E399;
+}
+
+.project img {
+  padding: 25px;
+}
+
+
+
+/*FOOTER*/
+footer {
+  background-color: #55A16D;
+  display: block;
+  padding:10px;
+
+}
+
+#cglogo {
+  height: 60px;
+}
+
