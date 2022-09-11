@@ -1,3 +1,10 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "cgardens"
+theme = "ananke"
+paginate = 50 #frontpage pagination
+
+[params]
+    title = "Software Engineering"
+    slogan = "welcome to the garden" # does nothing?
+    featured_image = "images/peloton.png"
